@@ -1,0 +1,10 @@
+.zoom {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.zoom-icon {
+  margin-top: 10px;
+  display: block;
+}

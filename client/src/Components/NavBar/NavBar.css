@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ecf0f1;
+  height: 8vh;
+}
+
+.navbar h2 {
+  color: #e67e22;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin: 0 0 0 15rem;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-right: 15rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}

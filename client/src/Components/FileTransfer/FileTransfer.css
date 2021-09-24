@@ -1,0 +1,10 @@
+.file-transfer {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+
+.files {
+  display: inline-block;
+  margin-left: 20px;
+}

@@ -1,0 +1,10 @@
+.canvas {
+  background-color: #34495e;
+  width: 80vw;
+  height: 92vh;
+}
+
+.main-svg {
+  width: 100%;
+  height: 100%;
+}

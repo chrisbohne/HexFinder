@@ -1,0 +1,17 @@
+.grid-element {
+  overflow: visible;
+}
+
+.grid-element svg {
+  overflow: visible;
+}
+
+polygon {
+  fill: rgba(0,0,0,0.0);
+  stroke: black;
+}
+
+polygon:hover {
+  fill: rgba(0,0,0,0.5);
+
+}
