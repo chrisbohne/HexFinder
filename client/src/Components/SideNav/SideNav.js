@@ -4,7 +4,7 @@ import TileModal from '../TileModal/TileModal'
 import {useState, useContext} from 'react'
 import { PlaygroundContext } from '../../Contexts/Playground';
 import streetTiles from '../../assets/tiles/streetTiles'
-import actionTiles from '../../assets/tiles/actionTiles'
+import cityTiles from '../../assets/tiles/cityTiles'
 import natureTiles from '../../assets/tiles/natureTiles'
 import railTiles from '../../assets/tiles/railTiles'
 
@@ -32,8 +32,8 @@ function SideNav(props) {
       obj.name = key;
       return obj;
     }),
-    action: Object.keys(actionTiles).map((key) => {
-      const obj = actionTiles[key];
+    city: Object.keys(cityTiles).map((key) => {
+      const obj = cityTiles[key];
       obj.name = key;
       return obj;
     }),

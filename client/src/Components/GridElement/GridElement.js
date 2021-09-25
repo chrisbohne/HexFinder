@@ -2,7 +2,10 @@ import './GridElement.css';
 import {useState, useContext, useEffect} from 'react'
 import {PlaygroundContext} from '../../Contexts/Playground'
 import {storeInGraph, createGridElement} from '../../helpers/graphHelper'
-import actionTiles from '../../assets/tiles/actionTiles';
+import cityTiles from '../../assets/tiles/cityTiles';
+import streetTiles from '../../assets/tiles/streetTiles';
+import railTiles from '../../assets/tiles/railTiles';
+import natureTiles from '../../assets/tiles/natureTiles';
 
 
 function GridElement(props) {
@@ -11,8 +14,13 @@ function GridElement(props) {
 
   useEffect(() => {
     if (props.existingElement) {
-      const svg = actionTiles[props.existingElement.name]
-      console.log(svg)
+      let tiles;
+      const categ = props.existingElement.category
+      if (categ === 'city') tiles = cityTiles;
+      if (categ === 'street') tiles = streetTiles;
+      if (categ === 'rail') tiles = railTiles;
+      if (categ === 'nature') tiles = natureTiles;
+      const svg = tiles[props.existingElement.name]
       setElement(<svg x={props.x} y={props.y}>{svg.svg}</svg>)
     }
   },[])

@@ -42,10 +42,13 @@ export function storeInGraph (graph, xCoord, yCoord, tile) {
       }
     }
   }
-  // return graph
 }
 
 export function removeFromGraph () {
+
+}
+
+export function arrToGraph (arr) {
 
 }
 

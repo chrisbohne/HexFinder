@@ -10,7 +10,6 @@ const createGridElement = (arr, x,y) => {
 }
 
 export const createGrid = (rows, cols, arr) => {
-  console.log('new grid')
   const elementWidth = 200;
   const elementHeight = 86.6;
   const elementsArr = [];

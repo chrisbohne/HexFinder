@@ -1,6 +1,19 @@
 import './FileTransfer.css';
 
+import {useContext} from 'react';
+import { PlaygroundContext } from '../../Contexts/Playground';
+
 function FileTransfer() {
+
+  const {setLoadedData, loadedData} = useContext(PlaygroundContext);
+
+  function loadData() {
+    setLoadedData([
+      {name:'villageSVG', x:0, y:86.6, category: 'city'},
+      {name:'street10SVG', x:0, y:0, category: 'street'}
+    ])
+  }
+
   return (
     <div className="file-transfer">
       <svg className="files playground-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +24,7 @@ function FileTransfer() {
         <rect x="10" y="14" width="8.28664" height="2" rx="1" transform="rotate(-135 10 14)" fill="#ECF0F1"/>
       </svg>
 
-      <svg className="files playground-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg onClick={() => loadData()} className="files playground-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="20" height="20" rx="4" fill="#2C3E50"/>
         <rect x="9" y="14" width="12" height="2" rx="1" transform="rotate(-90 9 14)" fill="#ECF0F1"/>
         <rect x="3" y="15" width="14" height="2" rx="1" fill="#ECF0F1"/>

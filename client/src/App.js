@@ -6,23 +6,27 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import NavBar from './Components/NavBar/NavBar';
 import { PlaygroundContext } from './Contexts/Playground';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Graph from './helpers/graph';
 import {createGrid} from './helpers/grid';
 
 import './App.css';
 
 function App() {
-
+  // const data = [{name:'villageSVG', x:0, y:86.6, category: 'city'}, {name:'street10SVG', x:0, y:0, category: 'street'}];
   const [selectedTile, setSelectedTile] = useState({name: '', svg: '', category: '', connections: []});
   const [zoom, setZoom] = useState(1)
   const [vertical, setVertical] = useState(0)
   const [horizontal, setHorizontal] = useState(0)
   const [map, setMap] = useState(new Graph())
-  const [dataToStore, setDataToStore] = useState([{name:'villageSVG', x:0, y:86.6, category: 'city'}])
+  const [dataToStore, setDataToStore] = useState([])
+  const [loadedData, setLoadedData] = useState([
+    // {name:'villageSVG', x:0, y:86.6, category: 'city'},
+    // {name:'street10SVG', x:0, y:0, category: 'street'}
+  ])
   // const [currentCanvas, setCurrentCanvas] = useState('')
 
-  const [grid, setGrid] = useState(null)
+  const [grid, setGrid] = useState([])
 
 
   const value = {
@@ -39,17 +43,22 @@ function App() {
     dataToStore,
     setDataToStore,
     grid,
-    setGrid
+    setGrid,
+    loadedData,
+    setLoadedData
   }
 
   useEffect(() => {
-    setGrid(createGrid(2,4, dataToStore))
-  }, [])
+    // console.log('running')
+    const gridtest = createGrid(2,4, loadedData)
+    console.log(gridtest)
+    setGrid(gridtest)
+  },[loadedData])
 
   return (
     <div className="App">
-      {console.log(map)}
-      {console.log(dataToStore)}
+      {/* {console.log(map)}
+      {console.log(dataToStore)} */}
       <PlaygroundContext.Provider value={value}>
         <Router>
           <NavBar />

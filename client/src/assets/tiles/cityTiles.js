@@ -1,4 +1,4 @@
-const actionTiles = {
+const cityTiles = {
   citySVG: {
     svg: <circle r="30" fill="yellow"/>,
     category: 'city',
@@ -16,4 +16,4 @@ const actionTiles = {
   }
 }
 
-export default actionTiles
+export default cityTiles
