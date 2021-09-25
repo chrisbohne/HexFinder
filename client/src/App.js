@@ -6,9 +6,9 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import NavBar from './Components/NavBar/NavBar';
 import { PlaygroundContext } from './Contexts/Playground';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Graph from './helpers/graph';
-import createGrid from './helpers/grid';
+import {createGrid} from './helpers/grid';
 
 import './App.css';
 
@@ -19,14 +19,10 @@ function App() {
   const [vertical, setVertical] = useState(0)
   const [horizontal, setHorizontal] = useState(0)
   const [map, setMap] = useState(new Graph())
-  const [dataToStore, setDataToStore] = useState([])
-  const [currentCanvas, setCurrentCanvas] = useState(<svg className="main-svg">{createGrid(2,4)}</svg>)
+  const [dataToStore, setDataToStore] = useState([{name:'villageSVG', x:0, y:86.6, category: 'city'}])
+  // const [currentCanvas, setCurrentCanvas] = useState('')
 
-  const [canvasWidth, setCanvasWidth] = useState(null)
-  const [canvasHeight, setCanvasHeight] = useState(null)
-
-  const ref = useRef(null)
-
+  const [grid, setGrid] = useState(null)
 
 
   const value = {
@@ -42,18 +38,18 @@ function App() {
     setMap,
     dataToStore,
     setDataToStore,
-    currentCanvas,
-    setCurrentCanvas,
-    canvasHeight,
-    setCanvasHeight,
-    canvasWidth,
-    setCanvasWidth
+    grid,
+    setGrid
   }
 
+  useEffect(() => {
+    setGrid(createGrid(2,4, dataToStore))
+  }, [])
 
   return (
     <div className="App">
       {console.log(map)}
+      {console.log(dataToStore)}
       <PlaygroundContext.Provider value={value}>
         <Router>
           <NavBar />

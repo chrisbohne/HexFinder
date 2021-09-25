@@ -1,17 +1,23 @@
 import './GridElement.css';
-import {useState, useContext} from 'react'
+import {useState, useContext, useEffect} from 'react'
 import {PlaygroundContext} from '../../Contexts/Playground'
 import {storeInGraph, createGridElement} from '../../helpers/graphHelper'
+import actionTiles from '../../assets/tiles/actionTiles';
 
 
 function GridElement(props) {
   const [element, setElement] = useState('')
-  // const [prevElement, setPrevElement] = useState('')
-  // const [isClicked, setIsClicked] = useState(false)
   const {selectedTile, map, setDataToStore, dataToStore} = useContext(PlaygroundContext)
 
+  useEffect(() => {
+    if (props.existingElement) {
+      const svg = actionTiles[props.existingElement.name]
+      console.log(svg)
+      setElement(<svg x={props.x} y={props.y}>{svg.svg}</svg>)
+    }
+  },[])
+
   function addTile() {
-    // setIsClicked(true)
     if (element && selectedTile.svg === '') {
       setElement('')
     }
@@ -19,27 +25,14 @@ function GridElement(props) {
       setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
     }
     storeInGraph(map, props.x, props.y, selectedTile)
-    const storeData = {name: selectedTile.name, x: props.x, y: props.y}
+    const storeData = {name: selectedTile.name, x: props.x, y: props.y, category: selectedTile.category}
     const newArr = [...dataToStore, storeData]
     setDataToStore(newArr)
-    console.log(map)
   }
 
-  // function previewTile() {
-  //   setPrevElement(element)
-  //   setElement(<svg x={props.x} y={props.y}>{selectedTile.paint}</svg>)
-  // }
-
-  // function removePreview(evt) {
-  //   if (!isClicked) {
-  //     setElement(prevElement)
-  //   }
-  // }
-
-  return (
-    <svg onClick={()=>addTile()} /*onMouseEnter={()=> previewTile()} onMouseLeave={(evt) => removePreview(evt)}*/ className="grid-element">
+   return (
+    <svg onClick={()=>addTile()}  className="grid-element">
       <polygon transform={props.transform} points={createGridElement()} />
-      {/* <circle r="50" /> */}
       {element}
     </svg>
   );

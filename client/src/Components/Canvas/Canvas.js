@@ -14,6 +14,7 @@ function Canvas() {
     zoom,
     vertical,
     horizontal,
+    grid,
   } = useContext(PlaygroundContext)
 
   const [width, setWidth] = useState('')
@@ -31,7 +32,8 @@ function Canvas() {
   return (
     <div ref={ref} className="canvas" >
       <svg className="main-svg" viewBox={initialViewBox}>
-      {createGrid(rows, cols)}
+      {grid}
+      {/* {console.log(grid.map((el) => el.props.y)[0])} */}
       </svg>
     </div>
   );
