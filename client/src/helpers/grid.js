@@ -5,9 +5,7 @@ const createGridElement = (arr, x,y) => {
   if (arr.length) {
     element = arr.find(element => element.x === x && element.y === y)
   }
-  console.log(element)
   const transform = `translate(${x}, ${y})`
-  console.log(transform)
   return <GridElement existingElement={element} x={x} y={y} transform={transform} coord={{x,y}}/>
 }
 

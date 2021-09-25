@@ -49,16 +49,14 @@ function App() {
   }
 
   useEffect(() => {
-    // console.log('running')
-    const gridtest = createGrid(2,2, loadedData)
-    console.log(gridtest)
+    const gridtest = createGrid(2,4, loadedData)
     setGrid(gridtest)
   },[loadedData])
 
   return (
     <div className="App">
-      {/* {console.log(map)}
-      {console.log(dataToStore)} */}
+      {console.log(map)}
+      {console.log(dataToStore)}
       <PlaygroundContext.Provider value={value}>
         <Router>
           <NavBar />
