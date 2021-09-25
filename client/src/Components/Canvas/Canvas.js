@@ -9,36 +9,30 @@ function Canvas() {
   const rows = 2;
   const cols = 4;
   const ref = useRef(null)
-  const isInitialMount = useRef(true)
-  const {zoom, vertical, horizontal} = useContext(PlaygroundContext)
+
+  const {
+    zoom,
+    vertical,
+    horizontal,
+  } = useContext(PlaygroundContext)
+
   const [width, setWidth] = useState('')
   const [height, setHeight] = useState('')
   const [view, setView] = useState('');
-  const [initialView, setInitialView] = useState('');
-  // const initialViewBox = `${-width/2} ${-height/2} ${width} ${height}`
+  const initialViewBox = `${-width/2} ${-height/2} ${width} ${height}`
 
   useEffect(() => {
-      setWidth(ref.current.offsetHeight);
+      setWidth(ref.current.offsetWidth);
       setHeight(ref.current.offsetHeight);
-      setInitialView(`${-width/2} ${-height/2} ${width} ${height}`)
-  }, [height, width])
-
-  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false
-    } else {
       setView(`${-width/2*zoom + horizontal} ${-height/2*zoom + vertical} ${width*zoom} ${height*zoom}`)
       gsap.to('.main-svg',0.1, {attr: {viewBox: view}, ease: 'linear'})
-    }
-  }, [zoom, vertical, horizontal, view])
-
-  const svg = <svg className="main-svg" viewBox={initialView}>
-      {createGrid(rows, cols)}
-      </svg>
+  }, [zoom, vertical, horizontal, view,height, width])
 
   return (
     <div ref={ref} className="canvas" >
-      {svg}
+      <svg className="main-svg" viewBox={initialViewBox}>
+      {createGrid(rows, cols)}
+      </svg>
     </div>
   );
 }

@@ -6,8 +6,9 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import NavBar from './Components/NavBar/NavBar';
 import { PlaygroundContext } from './Contexts/Playground';
-import { useState } from 'react';
-import Graph from './helpers/graph'
+import { useState, useEffect, useRef } from 'react';
+import Graph from './helpers/graph';
+import createGrid from './helpers/grid';
 
 import './App.css';
 
@@ -19,8 +20,15 @@ function App() {
   const [horizontal, setHorizontal] = useState(0)
   const [map, setMap] = useState(new Graph())
   const [dataToStore, setDataToStore] = useState([])
-  const [currentCanvas, setCurrentCanvas] = useState('')
-  // const map = new Graph()
+  const [currentCanvas, setCurrentCanvas] = useState(<svg className="main-svg">{createGrid(2,4)}</svg>)
+
+  const [canvasWidth, setCanvasWidth] = useState(null)
+  const [canvasHeight, setCanvasHeight] = useState(null)
+
+  const ref = useRef(null)
+
+
+
   const value = {
     selectedTile,
     setSelectedTile,
@@ -35,8 +43,13 @@ function App() {
     dataToStore,
     setDataToStore,
     currentCanvas,
-    setCurrentCanvas
+    setCurrentCanvas,
+    canvasHeight,
+    setCanvasHeight,
+    canvasWidth,
+    setCanvasWidth
   }
+
 
   return (
     <div className="App">
