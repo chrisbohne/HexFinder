@@ -21,8 +21,8 @@ function App() {
   const [map, setMap] = useState(new Graph())
   const [dataToStore, setDataToStore] = useState([])
   const [loadedData, setLoadedData] = useState([
-    // {name:'villageSVG', x:0, y:86.6, category: 'city'},
-    // {name:'street10SVG', x:0, y:0, category: 'street'}
+    {name:'villageSVG', x:0, y:86.6, category: 'city'},
+    {name:'street10SVG', x:0, y:0, category: 'street'}
   ])
   // const [currentCanvas, setCurrentCanvas] = useState('')
 
@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     // console.log('running')
-    const gridtest = createGrid(2,4, loadedData)
+    const gridtest = createGrid(2,2, loadedData)
     console.log(gridtest)
     setGrid(gridtest)
   },[loadedData])

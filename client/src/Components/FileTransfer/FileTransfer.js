@@ -9,7 +9,7 @@ function FileTransfer() {
 
   function loadData() {
     setLoadedData([
-      {name:'villageSVG', x:0, y:86.6, category: 'city'},
+      {name:'townSVG', x:0, y:86.6, category: 'city'},
       {name:'street10SVG', x:0, y:0, category: 'street'}
     ])
   }

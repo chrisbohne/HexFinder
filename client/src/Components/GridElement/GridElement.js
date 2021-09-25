@@ -23,7 +23,7 @@ function GridElement(props) {
       const svg = tiles[props.existingElement.name]
       setElement(<svg x={props.x} y={props.y}>{svg.svg}</svg>)
     }
-  },[])
+  },[props.existingElement, props.x,props.y])
 
   function addTile() {
     if (element && selectedTile.svg === '') {
