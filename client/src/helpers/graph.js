@@ -42,7 +42,8 @@ class Graph {
     const adjacents = node.getAdjacents();
     this.storage.delete(value);
     for (let key in adjacents) {
-      const adjacentNode = this.storage.get(+key);
+      console.log(key)
+      const adjacentNode = this.storage.get(key);
       adjacentNode.removeAdjacent(node);
     }
   }

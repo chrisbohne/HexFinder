@@ -29,13 +29,13 @@ function getNeighbors(graph, hex) {
 }
 
 // add tile in graph and add edges for connected tiles
-export function storeInGraph (graph, xCoord, yCoord, tile) {
-  const hex = hexRound(pixelToHex(flat, Point(xCoord, yCoord)))
+export function storeInGraph (graph, tile) {
+  const {category, connections, x, y} = tile
+  const hex = hexRound(pixelToHex(flat, Point(x, y)))
   const hexString = `${hex.x},${hex.y},${hex.z}`
   graph.addVertex(hexString, tile)
   const neighbors = getNeighbors(graph, hex)
   for (const neighbor of neighbors) {
-    const {category, connections} = tile
     if (neighbor.node.tile.category === category && connections) {
       if (checkConnection(neighbor.direction, connections)) {
         graph.addEdge(hexString, neighbor.node.value, 5)
@@ -44,11 +44,15 @@ export function storeInGraph (graph, xCoord, yCoord, tile) {
   }
 }
 
-export function removeFromGraph () {
-
+export function removeFromGraph (graph, tile) {
+  const hex = hexRound(pixelToHex(flat, Point(tile.x, tile.y)))
+  const hexString = `${hex.x},${hex.y},${hex.z}`
+  graph.removeVertex(hexString)
 }
 
-export function arrToGraph (arr) {
-
+export function replaceInGraph (graph, tile) {
+ removeFromGraph(graph, tile)
+ storeInGraph(graph, tile)
 }
+
 

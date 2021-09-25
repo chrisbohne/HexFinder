@@ -25,6 +25,4 @@ export const createGrid = (rows, cols, arr) => {
   return elementsArr
 }
 
-export function loadGrid (grid, arr) {
 
-}

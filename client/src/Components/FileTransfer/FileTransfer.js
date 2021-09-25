@@ -2,16 +2,15 @@ import './FileTransfer.css';
 
 import {useContext} from 'react';
 import { PlaygroundContext } from '../../Contexts/Playground';
+import {db} from '../../helpers/db'
 
 function FileTransfer() {
 
-  const {setLoadedData, loadedData} = useContext(PlaygroundContext);
+  const {setLoadedData, setDataToStore} = useContext(PlaygroundContext);
 
   function loadData() {
-    setLoadedData([
-      {name:'townSVG', x:0, y:86.6, category: 'city'},
-      {name:'street10SVG', x:0, y:0, category: 'street'}
-    ])
+    setLoadedData(db.map1)
+    // setDataToStore(db.map1)
   }
 
   return (

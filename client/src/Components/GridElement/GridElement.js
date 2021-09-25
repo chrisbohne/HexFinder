@@ -1,7 +1,7 @@
 import './GridElement.css';
 import {useState, useContext, useEffect} from 'react'
 import {PlaygroundContext} from '../../Contexts/Playground'
-import {storeInGraph, createGridElement} from '../../helpers/graphHelper'
+import {storeInGraph, createGridElement, removeFromGraph, replaceInGraph} from '../../helpers/graphHelper'
 import cityTiles from '../../assets/tiles/cityTiles';
 import streetTiles from '../../assets/tiles/streetTiles';
 import railTiles from '../../assets/tiles/railTiles';
@@ -10,7 +10,7 @@ import natureTiles from '../../assets/tiles/natureTiles';
 
 function GridElement(props) {
   const [element, setElement] = useState('')
-  const {selectedTile, map, setDataToStore, dataToStore} = useContext(PlaygroundContext)
+  const {selectedTile, map} = useContext(PlaygroundContext)
 
   useEffect(() => {
     if (props.existingElement) {
@@ -20,22 +20,32 @@ function GridElement(props) {
       if (categ === 'street') tiles = streetTiles;
       if (categ === 'rail') tiles = railTiles;
       if (categ === 'nature') tiles = natureTiles;
+      const tileForGraph = {name: props.existingElement.name, x: props.x, y: props.y, connections: props.existingElement.connections, category: props.existingElement.category}
       const svg = tiles[props.existingElement.name]
       setElement(<svg x={props.x} y={props.y}>{svg.svg}</svg>)
+      storeInGraph(map, tileForGraph)
+      console.log(map)
     }
-  },[props.existingElement, props.x,props.y])
+  },[props.existingElement, props.x,props.y, map])
+
 
   function addTile() {
+    const tileForGraph = {name: selectedTile.name, x: props.x, y: props.y, connections: selectedTile.connections, category: selectedTile.category}
     if (element && selectedTile.svg === '') {
       setElement('')
+      removeFromGraph(map, tileForGraph);
+      console.log(map)
+    }
+    else if (element && selectedTile.svg) {
+      setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
+      replaceInGraph(map, tileForGraph);
+      console.log(map)
     }
     else {
       setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
+      storeInGraph(map,tileForGraph)
+      console.log(map)
     }
-    storeInGraph(map, props.x, props.y, selectedTile)
-    const storeData = {name: selectedTile.name, x: props.x, y: props.y, category: selectedTile.category}
-    const newArr = [...dataToStore, storeData]
-    setDataToStore(newArr)
   }
 
    return (
