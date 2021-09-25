@@ -7,7 +7,6 @@ function Tile(props) {
 
   return (
     <div onClick={() => setSelectedTile(props.tile)} className="tile">
-      {console.log(props)}
       <svg viewBox="-100 -100 200 200">{props.tile.svg}</svg>
     </div>
   );

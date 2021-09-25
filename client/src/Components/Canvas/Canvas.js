@@ -32,11 +32,13 @@ function Canvas() {
     }
   }, [zoom, vertical, horizontal, view])
 
+  const svg = <svg className="main-svg" viewBox={initialView}>
+      {createGrid(rows, cols)}
+      </svg>
+
   return (
     <div ref={ref} className="canvas" >
-      <svg className="main-svg" viewBox={initialView}>
-        {createGrid(rows, cols)}
-      </svg>
+      {svg}
     </div>
   );
 }

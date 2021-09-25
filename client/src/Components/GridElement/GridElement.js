@@ -8,7 +8,7 @@ function GridElement(props) {
   const [element, setElement] = useState('')
   // const [prevElement, setPrevElement] = useState('')
   // const [isClicked, setIsClicked] = useState(false)
-  const {selectedTile, map} = useContext(PlaygroundContext)
+  const {selectedTile, map, setDataToStore, dataToStore} = useContext(PlaygroundContext)
 
   function addTile() {
     // setIsClicked(true)
@@ -19,9 +19,10 @@ function GridElement(props) {
       setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
     }
     storeInGraph(map, props.x, props.y, selectedTile)
-    console.log(selectedTile)
-
-
+    const storeData = {name: selectedTile.name, x: props.x, y: props.y}
+    const newArr = [...dataToStore, storeData]
+    setDataToStore(newArr)
+    console.log(map)
   }
 
   // function previewTile() {

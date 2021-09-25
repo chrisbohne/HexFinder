@@ -34,7 +34,6 @@ export function storeInGraph (graph, xCoord, yCoord, tile) {
   const hexString = `${hex.x},${hex.y},${hex.z}`
   graph.addVertex(hexString, tile)
   const neighbors = getNeighbors(graph, hex)
-  console.log(neighbors)
   for (const neighbor of neighbors) {
     const {category, connections} = tile
     if (neighbor.node.tile.category === category && connections) {
@@ -43,6 +42,7 @@ export function storeInGraph (graph, xCoord, yCoord, tile) {
       }
     }
   }
+  // return graph
 }
 
 export function removeFromGraph () {
