@@ -12,7 +12,7 @@ import './Playground.css';
 
 function Playground() {
 
-  const [selectedTile, setSelectedTile] = useState({svg: '', category: '', connections: []});
+  const [selectedTile, setSelectedTile] = useState({name: '', svg: '', category: '', connections: []});
   const [zoom, setZoom] = useState(1)
   const [vertical, setVertical] = useState(0)
   const [horizontal, setHorizontal] = useState(0)

@@ -19,7 +19,7 @@ function GridElement(props) {
       setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
     }
     storeInGraph(map, props.x, props.y, selectedTile)
-    console.log(map)
+    console.log(selectedTile)
 
 
   }

@@ -17,10 +17,26 @@ function SideNav(props) {
   }
 
   const tileObj = {
-    nature: Object.keys(natureTiles).map((key) => (natureTiles[key])),
-    street: Object.keys(streetTiles).map((key) => (streetTiles[key])),
-    rail: Object.keys(railTiles).map((key) => (railTiles[key])),
-    action: Object.keys(actionTiles).map((key) => (actionTiles[key])),
+    nature: Object.keys(natureTiles).map((key) => {
+      const obj = natureTiles[key];
+      obj.name = key;
+      return obj;
+    }),
+    street: Object.keys(streetTiles).map((key) => {
+      const obj = streetTiles[key];
+      obj.name = key;
+      return obj;
+    }),
+    rail: Object.keys(railTiles).map((key) => {
+      const obj = railTiles[key];
+      obj.name = key;
+      return obj;
+    }),
+    action: Object.keys(actionTiles).map((key) => {
+      const obj = actionTiles[key];
+      obj.name = key;
+      return obj;
+    }),
   }
 
   const tileSelects = Object.entries(tileObj).map((category) => {
@@ -34,7 +50,7 @@ function SideNav(props) {
       <div id="selected-tile">
         <svg viewBox="-50 -75 100 150">{props.selectedTile.svg}</svg>
       </div>
-      <div onClick={()=> setSelectedTile({name: 'none', paint: ''})} id="erase">
+      <div onClick={()=> setSelectedTile({name: '', svg: '', category: '', connection: ''})} id="erase">
         <h4>Erase</h4>
       </div>
     </div>
