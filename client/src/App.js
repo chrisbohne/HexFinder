@@ -41,14 +41,13 @@ function App() {
   }
 
   useEffect(() => {
-    const gridtest = createGrid(2,4, loadedData)
+    const gridtest = createGrid(20,40, loadedData)
     setGrid(gridtest)
   },[loadedData])
 
   return (
     <div className="App">
-      {/* {console.log(dataToStore)} */}
-     {map.storage.forEach(el => console.log(el.tile.name))}
+      {console.log(loadedData)}
       <PlaygroundContext.Provider value={value}>
         <Router>
           <NavBar />

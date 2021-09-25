@@ -99,11 +99,3 @@ export const hexCorners = (layout, hex) => {
   return corners;
 }
 
-
-
-
-// function getNeighbors(col, row) {
-//   console.log(col, row)
-//   console.log(offsetToHex(col, row))
-//   // return hexDirections.map((direction) => hexNeighbor(Hex(col, row), direction))
-// }

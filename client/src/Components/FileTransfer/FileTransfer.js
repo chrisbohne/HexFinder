@@ -6,16 +6,27 @@ import {db} from '../../helpers/db'
 
 function FileTransfer() {
 
-  const {setLoadedData, setDataToStore} = useContext(PlaygroundContext);
+  const {setLoadedData, loadedData, map} = useContext(PlaygroundContext);
 
   function loadData() {
     setLoadedData(db.map1)
+    console.log(loadedData)
     // setDataToStore(db.map1)
+  }
+
+  function saveData(name) {
+
+    const storeArr = []
+    map.storage.forEach((el) => {
+      storeArr.push(el.tile)
+    })
+    db[name] = storeArr;
+    console.log(db);
   }
 
   return (
     <div className="file-transfer">
-      <svg className="files playground-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg onClick={() => saveData('test')} className="files playground-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="20" height="20" rx="4" fill="#2C3E50"/>
         <rect width="12" height="2" rx="1" transform="matrix(0 1 1 0 9 1.59998)" fill="#ECF0F1"/>
         <rect x="3" y="15" width="14" height="2" rx="1" fill="#ECF0F1"/>

@@ -10,7 +10,7 @@ import natureTiles from '../../assets/tiles/natureTiles';
 
 function GridElement(props) {
   const [element, setElement] = useState('')
-  const {selectedTile, map} = useContext(PlaygroundContext)
+  const {selectedTile, map, loadedData} = useContext(PlaygroundContext)
 
   useEffect(() => {
     if (props.existingElement) {
@@ -26,7 +26,7 @@ function GridElement(props) {
       storeInGraph(map, tileForGraph)
       console.log(map)
     }
-  },[props.existingElement, props.x,props.y, map])
+  },[props.existingElement, props.x,props.y, map, loadedData])
 
 
   function addTile() {
@@ -42,7 +42,7 @@ function GridElement(props) {
       console.log(map)
     }
     else {
-      setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
+      setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)
       storeInGraph(map,tileForGraph)
       console.log(map)
     }

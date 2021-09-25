@@ -4,6 +4,7 @@
   width: 20vw;
   position: absolute;
   left: 20vw;
+  overflow: scroll;
 }
 
 #close-modal {
