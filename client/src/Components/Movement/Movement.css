@@ -2,5 +2,16 @@
   position: absolute;
   bottom: 50px;
   left: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.horizontal-container {
+  margin: 1px 0;
+}
+
+.horizontal-container svg {
+  margin: 0 30px;
+}

@@ -40,7 +40,7 @@ const streetTiles = {
     <path className="street-hex-side" d="M189.5 53.3985L164.5 75.0491L118 61.6257V87.5971H83V61.337V51.5221L50 41.9958L14.5 31.7478V29.75L39.5 10.0972L83 22.6545L150 41.9958L189.5 51.4V53.3985Z" fill="#414040"/>
     <path className="street-top" d="M150 39.9987L189.5 51.4014L164.5 73.052L118 59.6286V85.6H83V59.34V49.525L50 39.9987L14.5 29.7507L39.5 8.1001L83 20.6575L150 39.9987Z" fill="#6C6C6C"/>
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
-    height: 137,
+    height: 138,
     category: 'street',
     connections: [4,2,1]
   },

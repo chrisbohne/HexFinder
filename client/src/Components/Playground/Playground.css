@@ -7,3 +7,10 @@
   height:50px;
   cursor: pointer;
 }
+
+.playground-icon:hover rect:not(:first-of-type) {
+  fill: #e67e22;
+}
+.playground-icon:hover path {
+  fill: #e67e22;
+}

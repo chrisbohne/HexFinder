@@ -26,7 +26,7 @@ function Canvas() {
       setWidth(ref.current.offsetWidth);
       setHeight(ref.current.offsetHeight);
       setView(`${-width/2*zoom + horizontal} ${-height/2*zoom + vertical} ${width*zoom} ${height*zoom}`)
-      gsap.to('.main-svg',0.1, {attr: {viewBox: view}, ease: 'linear'})
+      gsap.to('.main-svg',0.3, {attr: {viewBox: view}, ease: 'linear'})
   }, [zoom, vertical, horizontal, view,height, width])
 
   return (

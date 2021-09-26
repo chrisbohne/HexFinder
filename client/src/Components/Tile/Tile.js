@@ -4,10 +4,11 @@ import { PlaygroundContext } from '../../Contexts/Playground';
 
 function Tile(props) {
   const {setSelectedTile} = useContext(PlaygroundContext)
+  const view = `-50 ${props.tile.height - 260 } 300 300`
 
   return (
     <div onClick={() => setSelectedTile(props.tile)} className="tile">
-      <svg viewBox="-100 -100 200 200">{props.tile.svg}</svg>
+      <svg viewBox={view}>{props.tile.svg}</svg>
     </div>
   );
 }
