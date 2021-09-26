@@ -22,7 +22,7 @@ function GridElement(props) {
       if (categ === 'nature') tiles = natureTiles;
       const tileForGraph = {name: props.existingElement.name, x: props.x, y: props.y, connections: props.existingElement.connections, category: props.existingElement.category}
       const svg = tiles[props.existingElement.name]
-      setElement(<svg x={props.x} y={props.y}>{svg.svg}</svg>)
+      setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 -svg.height}>{svg.svg}</svg>)
       storeInGraph(map, tileForGraph)
       console.log(map)
     }
@@ -37,11 +37,11 @@ function GridElement(props) {
       console.log(map)
     }
     else if (element && selectedTile.svg) {
-      setElement(<svg x={props.x} y={props.y}>{selectedTile.svg}</svg>)
+      setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)
       replaceInGraph(map, tileForGraph);
       console.log(map)
     }
-    else {
+    else if(selectedTile.svg) {
       setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)
       storeInGraph(map,tileForGraph)
       console.log(map)

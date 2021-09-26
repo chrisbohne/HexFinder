@@ -47,7 +47,6 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(loadedData)}
       <PlaygroundContext.Provider value={value}>
         <Router>
           <NavBar />
