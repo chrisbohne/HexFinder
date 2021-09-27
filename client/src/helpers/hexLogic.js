@@ -26,6 +26,7 @@ export const Hex = (x, y, z) => Math.round(x + y + z) === 0 && ({x,y,z})
 
 // calculating with Hex
 const hexAdd = (a,b) => Hex(a.x + b.x, a.y + b.y, a.z + b.z)
+const hexSubstract = (a, b) => Hex(a.x - b.x, a.y - b.y, a.z - b.z)
 
 // Get Neighbors
 const hexDirections = [
@@ -98,4 +99,12 @@ export const hexCorners = (layout, hex) => {
   }
   return corners;
 }
+
+// get direct distances between two hexagons
+
+const hexLength = (hex) => {
+  return (Math.abs(hex.x) + Math.abs(hex.y) + Math.abs(hex.z)) /2;
+}
+
+export const hexDistance = (a,b) => hexLength(hexSubstract(a,b))
 

@@ -17,6 +17,15 @@ function App() {
   const [zoom, setZoom] = useState(1)
   const [vertical, setVertical] = useState(0)
   const [horizontal, setHorizontal] = useState(0)
+
+  const [streetWeight, setStreetWeight] = useState(5)
+  const [railWeight, setRailWeight] = useState(2)
+  const [locations, setLocations] = useState([])
+  const [startLocation, setStartLocation] = useState([])
+  const [targetLocation, setTargetLocation] = useState([])
+  // needs to be calculated by distance
+  const [flightWeight, setFlightWeight] = useState(5)
+  const [dataArr, setDataArr] = useState([])
   const [map, setMap] = useState(new Graph())
   const [loadedData, setLoadedData] = useState([])
 
@@ -37,17 +46,33 @@ function App() {
     grid,
     setGrid,
     loadedData,
-    setLoadedData
+    setLoadedData,
+    dataArr,
+    setDataArr,
+    streetWeight,
+    setStreetWeight,
+    flightWeight,
+    setFlightWeight,
+    railWeight,
+    setRailWeight,
+    locations,
+    setLocations,
+    setStartLocation,
+    startLocation,
+    setTargetLocation,
+    targetLocation
   }
 
   useEffect(() => {
     const gridtest = createGrid(20,40, loadedData)
     setGrid(gridtest)
+    setDataArr(loadedData)
   },[loadedData])
 
   return (
     <div className="App">
       <PlaygroundContext.Provider value={value}>
+        {console.log(locations)}
         <Router>
           <NavBar />
           <Switch>

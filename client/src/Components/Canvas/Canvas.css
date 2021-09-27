@@ -8,3 +8,21 @@
   width: 100%;
   height: 100%;
 }
+
+/* Tile Colors */
+
+.street-hex-top {
+  fill: #1abc9c
+}
+
+.street-side {
+  fill: #16a085
+}
+
+.rail-hex-top {
+  fill: #1abc9c
+}
+
+.rail-hex-side {
+  fill: #16a085
+}

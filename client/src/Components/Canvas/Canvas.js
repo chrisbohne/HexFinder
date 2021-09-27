@@ -1,4 +1,3 @@
-import createGrid from '../../helpers/grid'
 import { useEffect, useRef, useState, useContext } from 'react';
 import { PlaygroundContext } from '../../Contexts/Playground';
 import {gsap} from 'gsap'
@@ -6,8 +5,6 @@ import {gsap} from 'gsap'
 import './Canvas.css';
 
 function Canvas() {
-  const rows = 2;
-  const cols = 4;
   const ref = useRef(null)
 
   const {
@@ -33,7 +30,6 @@ function Canvas() {
     <div ref={ref} className="canvas" >
       <svg className="main-svg" viewBox={initialViewBox}>
       {grid}
-      {/* {console.log(grid.map((el) => el.props.y)[0])} */}
       </svg>
     </div>
   );

@@ -4,6 +4,7 @@ import Zoom from '../Zoom/Zoom'
 import Controls from '../Controls/Controls'
 import FileTransfer from '../FileTransfer/FileTransfer'
 import Movement from '../Movement/Movement';
+import Settings from '../Settings/Settings'
 
 import './Playground.css';
 
@@ -20,6 +21,7 @@ function Playground(props) {
       <Movement />
       <FileTransfer />
       <Controls />
+      <Settings />
     </div>
   );
 }

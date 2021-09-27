@@ -1,17 +1,25 @@
 import './Controls.css';
 
 import { PlaygroundContext } from '../../Contexts/Playground';
+import { storeInGraph } from '../../helpers/graphHelper';
 import {dijkstraSearch} from '../../helpers/pathfinding'
 import {useContext} from 'react'
 
 function Controls() {
 
-  const {map} = useContext(PlaygroundContext)
+  const {map, dataArr, streetWeight, railWeight, flightWeight} = useContext(PlaygroundContext)
 
   function search () {
-    const start = '0,0,0'
-    const end = '0,-2,2'
-    console.log(dijkstraSearch(map, start, end))
+    // create Graph from dataArr
+    for (let tile of dataArr) {
+      let weight;
+      if (tile.category === 'street') weight = streetWeight
+      if (tile.category === 'rail') weight = railWeight
+      if (tile.category === 'city') weight = flightWeight
+      storeInGraph(map, tile, weight)
+    }
+
+    // Start the Search
   }
 
   return (

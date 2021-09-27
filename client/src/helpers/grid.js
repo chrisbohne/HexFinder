@@ -1,6 +1,7 @@
 import GridElement from "../Components/GridElement/GridElement"
 
 const createGridElement = (arr, x,y) => {
+  // for loading an grid with existing data in arr
   let element
   if (arr.length) {
     element = arr.find(element => element.x === x && element.y === y)
