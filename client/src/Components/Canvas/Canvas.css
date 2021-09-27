@@ -11,18 +11,144 @@
 
 /* Tile Colors */
 
+
 .street-hex-top {
-  fill: #1abc9c
+  fill: #2BA84A
 }
 
 .street-side {
-  fill: #16a085
+  fill: #329F5B
+}
+
+.street-hex-side {
+  fill: #414040;
+}
+
+
+
+.rail-side {
+  fill: #414040;
 }
 
 .rail-hex-top {
-  fill: #1abc9c
+  fill: #2BA84A
 }
 
 .rail-hex-side {
-  fill: #16a085
+  fill: #329F5B
+}
+
+.rail-top {
+  fill: #ADB6C4;
+}
+
+
+.city-hex-top {
+  fill: #7f8c8d;
+}
+
+.city-hex-side {
+  fill: #6A6A6A
+}
+
+.village-hex-top {
+  fill: #628B48;
+}
+
+.village-hex-side {
+  fill: #65743A;
+}
+
+.village-front {
+  fill: #BA9593;
+}
+
+.village-side {
+  fill: #CB8C88;
+}
+
+.village-window {
+  fill: #34495E
+}
+
+.village-door {
+  fill: #895737;
+}
+
+.town-hex-top {
+  fill: #7f8c8d;
+}
+
+.town-window {
+  fill: #8D94BA;
+}
+
+.town-clock {
+  fill: #86BBD8;
+}
+
+.town-hex-side {
+  fill: #6A6A6A;
+}
+
+.sight-hex-top {
+  fill: #7f8c8d;
+}
+
+
+
+.sight-hex-side {
+  fill: #6A6A6A;
+}
+
+.forest-hex-top {
+  fill: #2BA84A
+}
+
+.forest-hex-side {
+  fill: #329F5B
+}
+
+.forest-tree-front {
+  fill: #119822;
+}
+
+.forest-tree-right {
+  fill: #2A7221;
+}
+
+.forest-tree-left {
+  fill: #4DAA57;
+}
+
+.forest-trunk-left {
+  fill: #99621E;
+}
+.forest-trunk-right {
+  fill: #4C2E05;
+}
+
+.mountain-hex-side {
+  fill: #616160
+}
+
+.water-hex-top {
+  fill: #279AF1
+}
+
+.city-front {
+  fill: #C04CFD;
+}
+
+.village-roof-front {
+  fill: #A63446;
+}
+
+.village-roof-side {
+  fill: #a01f32;
+}
+
+.start {
+  pointer-events: none;
+  overflow: visible;
 }

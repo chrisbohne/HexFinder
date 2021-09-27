@@ -42,22 +42,30 @@ function Settings() {
       </label>
       <label htmlFor="selectStart">
         Start Location
-        <select  id="selectStart">
+        <select
+          id="selectStart"
+          value={startLocation}
+          onChange={(e) => setStartLocation(e.target.value)}
+        >
           <option value=""></option>
            {locations.map((location) => (
-              <option value={location.name} key={location.name}>
-                {location.name}
+              <option value={JSON.stringify(location)} key={location.name}>
+                {location.x + "," +location.y}
               </option>
             ))}
         </select>
       </label>
       <label htmlFor="selectTarget">
         Target Location
-        <select  id="selectTarget">
-          <option value=""></option>
+        <select
+          id="selectTarget"
+          value={targetLocation}
+          onChange={(e) => setTargetLocation(e.target.value)}
+        >
+            <option value=""></option>
            {locations.map((location) => (
-              <option value={location.name} key={location.name}>
-                {location.name}
+              <option value={JSON.stringify(location)} key={location.name}>
+                {location.x + "," +location.y}
               </option>
             ))}
         </select>

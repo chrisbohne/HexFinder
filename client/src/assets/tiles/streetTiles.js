@@ -6,7 +6,7 @@ const streetTiles = {
     <path className="street-hex-side" d="M83 86.5H118V88.5H83V86.5Z" fill="#414040"/></g>,
     height: 138,
     category: 'street',
-    connections: [5,2]
+    streetConnections: [5,2]
   },
   street30SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -15,7 +15,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [3,0]
+    streetConnections: [3,0]
   },
   street41SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -24,7 +24,7 @@ const streetTiles = {
     <path className="street-top" d="M164.5 71.952L14.5 28.6507L39.5 7L189.5 50.3013L164.5 71.952Z" fill="#6C6C6C"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,1]
+    streetConnections: [4,1]
   },
   street431SVG: {
     svg: <g><path className="street-hex-top" d="M150 0.99707L200 44.2984L150 87.5997H50L0 44.2984L50 0.99707H150Z" fill="#2ECC71"/>
@@ -33,7 +33,7 @@ const streetTiles = {
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,3,1]
+    streetConnections: [4,3,1]
   },
   street421SVG: {
     svg: <g><path className="street-hex-top" d="M150 0.99707L200 44.2984L150 87.5997H50L0 44.2984L50 0.99707H150Z" fill="#2ECC71"/>
@@ -42,7 +42,7 @@ const streetTiles = {
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [4,2,1]
+    streetConnections: [4,2,1]
   },
   street541SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -51,7 +51,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [5,4,1]
+    streetConnections: [5,4,1]
   },
   street410SVG: {
     svg: <g><path className="street-hex-top" d="M150 0.99707L200 44.2984L150 87.5997H50L0 44.2984L50 0.99707H150Z" fill="#2ECC71"/>
@@ -60,7 +60,7 @@ const streetTiles = {
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [4,1,0]
+    streetConnections: [4,1,0]
   },
   street310SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -69,7 +69,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [3,1,0]
+    streetConnections: [3,1,0]
   },
   street320SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -78,7 +78,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [3,2,0]
+    streetConnections: [3,2,0]
   },
   street530SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -87,7 +87,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,3,0]
+    streetConnections: [5,3,0]
   },
   street430SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -96,7 +96,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,3,0]
+    streetConnections: [4,3,0]
   },
   street520SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -105,7 +105,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,2,0]
+    streetConnections: [5,2,0]
   },
   street542SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -114,7 +114,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,2]
+    streetConnections: [5,4,2]
   },
   street532SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -123,7 +123,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,3,2]
+    streetConnections: [5,3,2]
   },
   street521SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -132,7 +132,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,2,1]
+    streetConnections: [5,2,1]
   },
   street4310SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -141,7 +141,7 @@ const streetTiles = {
     <path className="street-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,3,1,0]
+    streetConnections: [4,3,1,0]
   },
   street4321SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -150,7 +150,7 @@ const streetTiles = {
     <path className="street-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,3,2,1]
+    streetConnections: [4,3,2,1]
   },
   street5431SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -159,7 +159,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,1]
+    streetConnections: [5,4,3,1]
   },
   street5410SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -168,7 +168,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,1,0]
+    streetConnections: [5,4,1,0]
   },
   street4210SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -177,7 +177,7 @@ const streetTiles = {
     <path className="street-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,2,1,0]
+    streetConnections: [4,2,1,0]
   },
   street5421SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -186,7 +186,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,2,1]
+    streetConnections: [5,4,2,1]
   },
   street3210SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -195,7 +195,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [3,2,1,0]
+    streetConnections: [3,2,1,0]
   },
   street5310SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -204,7 +204,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,3,1,0]
+    streetConnections: [5,3,1,0]
   },
   street5430SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -213,7 +213,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,0]
+    streetConnections: [5,4,3,0]
   },
   street4320SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -222,7 +222,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,3,2,0]
+    streetConnections: [4,3,2,0]
   },
   street5320SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -231,7 +231,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,3,2,0]
+    streetConnections: [5,3,2,0]
   },
   street5420SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -240,7 +240,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,2,0]
+    streetConnections: [5,4,2,0]
   },
   street5432SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -249,7 +249,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,2]
+    streetConnections: [5,4,3,2]
   },
   street5210SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -258,7 +258,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,2,1,0]
+    streetConnections: [5,2,1,0]
   },
   street54321SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -267,7 +267,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,2,1]
+    streetConnections: [5,4,3,2,1]
   },
   street53210SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -276,7 +276,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,3,2,1,0]
+    streetConnections: [5,3,2,1,0]
   },
   street54320SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -285,7 +285,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,2,0]
+    streetConnections: [5,4,3,2,0]
   },
   street54210SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -294,7 +294,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,2,1,0]
+    streetConnections: [5,4,2,1,0]
   },
   street43210SVG: {
     svg: <g><path className="street-hex-top" d="M150 0.99707L200 44.2984L150 87.5997H50L0 44.2984L50 0.99707H150Z" fill="#2ECC71"/>
@@ -303,7 +303,7 @@ const streetTiles = {
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [4,3,2,1,0]
+    streetConnections: [4,3,2,1,0]
   },
   street54310SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -312,7 +312,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,1,0]
+    streetConnections: [5,4,3,1,0]
   },
   street543210SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -321,7 +321,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4,3,2,1,0]
+    streetConnections: [5,4,3,2,1,0]
   },
   street31SVG: {
     svg: <g><path className="street-hex-top" d="M150 0.99707L200 44.2984L150 87.5997H50L0 44.2984L50 0.99707H150Z" fill="#2ECC71"/>
@@ -330,7 +330,7 @@ const streetTiles = {
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [3,1]
+    streetConnections: [3,1]
   },
   street40SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -339,7 +339,7 @@ const streetTiles = {
     <path className="street-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,0]
+    streetConnections: [4,0]
   },
   street20SVG: {
     svg: <g><path className="street-hex-top" d="M50 0.99707L0 44.2984L50 87.5997H150L200 44.2984L150 0.99707H50Z" fill="#2ECC71"/>
@@ -348,7 +348,7 @@ const streetTiles = {
     <path className="street-side" d="M150 87.5996L200 44.2983V94.297L150 137.597H50L0 94.297V44.2983L50 87.5996H150Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [2,0]
+    streetConnections: [2,0]
   },
   street42SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -357,7 +357,7 @@ const streetTiles = {
     <path className="street-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [4,2]
+    streetConnections: [4,2]
   },
   street53SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -366,7 +366,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,3]
+    streetConnections: [5,3]
   },
   street51SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -375,7 +375,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,1]
+    streetConnections: [5,1]
   },
   street32SVG: {
     svg: <g><path className="street-hex-top" d="M50 0.99707L0 44.2984L50 87.5997H150L200 44.2984L150 0.99707H50Z" fill="#2ECC71"/>
@@ -384,7 +384,7 @@ const streetTiles = {
     <path className="street-side" d="M150 87.5996L200 44.2983V94.297L150 137.597H50L0 94.297V44.2983L50 87.5996H150Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [3,2]
+    streetConnections: [3,2]
   },
   street21SVG: {
     svg: <g><path className="street-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -393,7 +393,7 @@ const streetTiles = {
     <path className="street-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [2,1]
+    streetConnections: [2,1]
   },
   street50SVG: {
     svg: <g><path className="street-hex-top" d="M50 1.99707L0 45.2984L50 88.5997H150L200 45.2984L150 1.99707H50Z" fill="#2ECC71"/>
@@ -402,7 +402,7 @@ const streetTiles = {
     <path className="street-side" d="M150 88.5996L200 45.2983V95.297L150 138.597H50L0 95.297V45.2983L50 88.5996H150Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,0]
+    streetConnections: [5,0]
   },
   street54SVG: {
     svg: <g><path className="street-hex-top" d="M150 1.99707L200 45.2984L150 88.5997H50L0 45.2984L50 1.99707H150Z" fill="#2ECC71"/>
@@ -411,7 +411,7 @@ const streetTiles = {
     <path className="street-side" d="M50 88.5996L0 45.2983V95.297L50 138.597H150L200 95.297V45.2983L150 88.5996H50Z" fill="#31BF61"/></g>,
     height: 139,
     category: 'street',
-    connections: [5,4]
+    streetConnections: [5,4]
   },
   street43SVG: {
     svg: <g><path className="street-hex-top" d="M150 0.99707L200 44.2984L150 87.5997H50L0 44.2984L50 0.99707H150Z" fill="#2ECC71"/>
@@ -420,7 +420,7 @@ const streetTiles = {
     <path className="street-side" d="M50 87.5996L0 44.2983V94.297L50 137.597H150L200 94.297V44.2983L150 87.5996H50Z" fill="#31BF61"/></g>,
     height: 138,
     category: 'street',
-    connections: [4,3]
+    streetConnections: [4,3]
   },
   street10SVG: {
     svg: <g><path className="street-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -429,7 +429,7 @@ const streetTiles = {
     <path className="street-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'street',
-    connections: [1,0]
+    streetConnections: [1,0]
   }
 }
 

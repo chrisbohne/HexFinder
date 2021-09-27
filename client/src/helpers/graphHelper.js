@@ -16,6 +16,11 @@ function checkConnection (direction, connectionArr) {
   if (connectionArr.some(el => Math.abs(direction - el) === 3)) return true
   return false
 }
+
+// function checkConnection (neighborDirection, neighborConnections) {
+//   if (neighborConnections.includes(neighborDirection)) return true
+//   return false
+// }
 // get all neighbors and get their node
 function getNeighbors(graph, hex) {
   const neighborTiles = []
@@ -50,9 +55,10 @@ export function storeInGraph (graph, tile, weight) {
     const hexString = `${hex.x},${hex.y},${hex.z}`
     graph.addVertex(hexString, tile)
     const neighbors = getNeighbors(graph, hex)
+    console.log(neighbors)
     for (const neighbor of neighbors) {
-      if (neighbor.node.tile.category === category && connections) {
-        if (checkConnection(neighbor.direction, connections)) {
+      if ((neighbor.node.tile.category === 'city' && connections) || (neighbor.node.tile.category === 'street' && connections)) {
+        if (checkConnection(neighbor.direction, neighbor.node.tile.connections)) {
           graph.addEdge(hexString, neighbor.node.value, weight)
         }
       }

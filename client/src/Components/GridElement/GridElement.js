@@ -25,9 +25,9 @@ function GridElement(props) {
       const svg = tiles[props.existingElement.name]
       setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 -svg.height}>{svg.svg}</svg>)
       storeInGraph(map, tileForGraph)
-      // console.log(map)
     }
   },[props.existingElement, props.x,props.y, map, loadedData])
+
 
   function removeFromDataArr () {
     const index = dataArr.findIndex((el) => {
@@ -80,27 +80,7 @@ function GridElement(props) {
     }
   }
 
-
-  // function addTile() {
-  //   const tileForGraph = {name: selectedTile.name, x: props.x, y: props.y, connections: selectedTile.connections, category: selectedTile.category}
-  //   if (element && selectedTile.svg === '') {
-  //     setElement('')
-  //     removeFromGraph(map, tileForGraph);
-  //     console.log(map)
-  //   }
-  //   else if (element && selectedTile.svg) {
-  //     setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)
-  //     replaceInGraph(map, tileForGraph);
-  //     console.log(map)
-  //   }
-  //   else if(selectedTile.svg) {
-  //     setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)
-  //     storeInGraph(map,tileForGraph)
-  //     console.log(map)
-  //   }
-  // }
-
-   return (
+  return (
     <svg onClick={()=>addTile()}  className="grid-element">
       <polygon transform={props.transform} points={createGridElement()} />
       {element}

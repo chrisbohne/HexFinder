@@ -26,4 +26,8 @@ export const createGrid = (rows, cols, arr) => {
   return elementsArr
 }
 
+export const showLocation = (x, y) => {
+  const svg = <circle r="50" cx={x} cy={y} />
+}
+
 
