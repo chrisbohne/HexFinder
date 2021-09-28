@@ -39,17 +39,50 @@ function GridElement(props) {
       newArr.splice(index, 1)
       setDataArr(newArr)
     }
+
+    const locationsCopy = [...locations]
+    const locationIndex = locationsCopy.findIndex((loc) => {
+      return loc.x === props.x && loc.y === props.y
+    })
+
+    if (locationIndex) {
+      locationsCopy.splice(locationIndex, 1)
+      setLocations(locationsCopy)
+    }
   }
 
   function replaceInDataArr (el) {
+    let isCity = false;
     const index = dataArr.findIndex((el) => {
-      return el.x === props.x && el.y === props.y
+      const isSame = el.x === props.x && el.y === props.y
+      if (isSame) {
+        if (el.category === "city") isCity = true
+      }
+      return isSame
     })
 
     if (index >= 0) {
       const newArr = [...dataArr]
       newArr.splice(index, 1, el)
       setDataArr(newArr)
+    }
+
+    if (isCity) {
+      console.log('city')
+      const newLocation = {x: el.x, y: el.y, name: el.name}
+      const locationsCopy = [...locations]
+      const locationIndex = locationsCopy.findIndex((loc) => {
+        return loc.x === el.x && loc.y === el.y
+      })
+
+      if (el.category === 'city') {
+        locationsCopy.splice(locationIndex, 1, newLocation)
+        setLocations(locationsCopy)
+      }
+      else {
+        locationsCopy.splice(locationIndex, 1)
+        setLocations(locationsCopy)
+      }
     }
   }
 
@@ -68,6 +101,9 @@ function GridElement(props) {
     else if (element && selectedTile.svg) {
       setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)
       replaceInDataArr(tileToStore);
+      if (selectedTile.category === "city") {
+
+      }
     }
     else if(selectedTile.svg) {
       setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 - selectedTile.height}>{selectedTile.svg}</svg>)

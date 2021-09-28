@@ -24,7 +24,7 @@ function App() {
   const [startLocation, setStartLocation] = useState([])
   const [targetLocation, setTargetLocation] = useState([])
   const [pathArr, setPathArr] = useState([])
-  // needs to be calculated by distance
+
   const [flightWeight, setFlightWeight] = useState(8)
   const [dataArr, setDataArr] = useState([])
   const [map, setMap] = useState(new Graph())
