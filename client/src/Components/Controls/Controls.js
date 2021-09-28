@@ -9,7 +9,7 @@ import Graph from '../../helpers/graph';
 
 function Controls() {
 
-  const {map, setMap, dataArr, streetWeight, railWeight, flightWeight, startLocation, targetLocation} = useContext(PlaygroundContext)
+  const {map, setMap, dataArr, streetWeight, railWeight, flightWeight, startLocation, targetLocation, setPathArr} = useContext(PlaygroundContext)
 
   function search () {
     // create Graph from dataArr
@@ -21,15 +21,17 @@ function Controls() {
       setMap(new Graph())
       storeInGraph(map, tile, weight)
     }
-
+    console.log(map)
     // Start the Search
     const flat = Layout(flatLayout, Point(100,50), Point(0,0))
     const start = hexRound(pixelToHex(flat,Point(JSON.parse(startLocation).x,(JSON.parse(startLocation).y))))
     const target = hexRound(pixelToHex(flat, Point(JSON.parse(targetLocation).x,(JSON.parse(targetLocation).y))))
-    console.log(map)
-    console.log(dijkstraSearch(map, `${start.x},${start.y},${start.z}`, `${target.x},${target.y},${target.z}`))
-    // console.log(map)
-    // console.log(dijkstraSearch)
+    const path =dijkstraSearch(map, `${start.x},${start.y},${start.z}`, `${target.x},${target.y},${target.z}`)
+    const tiles = path.path.map((el) => (map.storage.get(el)))
+    const coordArr = tiles.map((el) => ({x: el.tile.x, y: el.tile.y}))
+    // coordArr.pop()
+    // coordArr.shift()
+    setPathArr(coordArr)
   }
 
   return (

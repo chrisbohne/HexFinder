@@ -13,7 +13,7 @@ import {createGrid} from './helpers/grid';
 import './App.css';
 
 function App() {
-  const [selectedTile, setSelectedTile] = useState({name: '', svg: '', category: '', connections: []});
+  const [selectedTile, setSelectedTile] = useState({name: '', svg: '', category: ''});
   const [zoom, setZoom] = useState(1)
   const [vertical, setVertical] = useState(0)
   const [horizontal, setHorizontal] = useState(0)
@@ -23,8 +23,9 @@ function App() {
   const [locations, setLocations] = useState([])
   const [startLocation, setStartLocation] = useState([])
   const [targetLocation, setTargetLocation] = useState([])
+  const [pathArr, setPathArr] = useState([])
   // needs to be calculated by distance
-  const [flightWeight, setFlightWeight] = useState(5)
+  const [flightWeight, setFlightWeight] = useState(8)
   const [dataArr, setDataArr] = useState([])
   const [map, setMap] = useState(new Graph())
   const [loadedData, setLoadedData] = useState([])
@@ -60,7 +61,9 @@ function App() {
     setStartLocation,
     startLocation,
     setTargetLocation,
-    targetLocation
+    targetLocation,
+    pathArr,
+    setPathArr
   }
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import {Hex, hexNeighbor, Layout, flatLayout, Point, pixelToHex, hexRound, hexCorners} from './hexLogic'
+import {Hex, hexNeighbor, Layout, flatLayout, Point, pixelToHex, hexRound, hexCorners, hexDistance} from './hexLogic'
 
 const flat = Layout(flatLayout, Point(100,50), Point(0,0))
 
@@ -12,15 +12,25 @@ export function createGridElement () {
 }
 
 // check if neighbor and current have some connection
-function checkConnection (direction, connectionArr) {
-  if (connectionArr.some(el => Math.abs(direction - el) === 3)) return true
-  return false
-}
-
-// function checkConnection (neighborDirection, neighborConnections) {
-//   if (neighborConnections.includes(neighborDirection)) return true
+// function checkConnection (direction, connectionArr) {
+//   if (connectionArr.some(el => Math.abs(direction - el) === 3)) return true
 //   return false
 // }
+
+function checkConnection (neighborDirection, neighbor, tile) {
+  if (tile.railConnections && neighbor.railConnections) {
+    if (tile.railConnections.includes(neighborDirection)) {
+      return neighbor.railConnections.some(el => Math.abs(neighborDirection - el) === 3)
+    }
+  } else if (tile.streetConnections && neighbor.streetConnections) {
+    if (tile.streetConnections.includes(neighborDirection)) {
+      return neighbor.streetConnections.some(el => Math.abs(neighborDirection - el) === 3)
+    }
+  }
+  else return false
+}
+
+
 // get all neighbors and get their node
 function getNeighbors(graph, hex) {
   const neighborTiles = []
@@ -50,17 +60,33 @@ function getNeighbors(graph, hex) {
 // }
 
 export function storeInGraph (graph, tile, weight) {
-    const {category, connections, x, y} = tile
+    const {x, y} = tile
     const hex = hexRound(pixelToHex(flat, Point(x, y)))
     const hexString = `${hex.x},${hex.y},${hex.z}`
+    const airports = [];
+    if(tile.name === 'citySVG') {
+      graph.storage.forEach(el => {
+        if (el.tile.name === 'citySVG') airports.push(el.value)
+      })
+    }
     graph.addVertex(hexString, tile)
+    if(airports.length) {
+      let airportHex = airports[0].split(',')
+      airportHex = {x: airportHex[0], y: airportHex[1], z: airportHex[2]}
+      const distance = hexDistance(hex, airportHex)
+      console.log(distance)
+      graph.addEdge(hexString, airports[0], weight * distance)
+    }
     const neighbors = getNeighbors(graph, hex)
-    console.log(neighbors)
+
+
     for (const neighbor of neighbors) {
-      if ((neighbor.node.tile.category === 'city' && connections) || (neighbor.node.tile.category === 'street' && connections)) {
-        if (checkConnection(neighbor.direction, neighbor.node.tile.connections)) {
+      const neighborTile = neighbor.node.tile
+      if (checkConnection(neighbor.direction, neighborTile, tile)) {
+      // if ((neighbor.node.tile.category === 'city' && connections) || (neighbor.node.tile.category === 'street' && connections)) {
+      //   if (checkConnection(neighbor.direction, neighbor.node.tile.connections)) {
           graph.addEdge(hexString, neighbor.node.value, weight)
-        }
+        // }
       }
     }
 }

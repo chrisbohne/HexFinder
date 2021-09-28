@@ -23,20 +23,20 @@ function Settings() {
     <div className="settings">
       <label htmlFor="streetInput">
         Streets
-        <input onChange={(e) => setStreetWeight(e.target.value)}
+        <input onChange={(e) => setStreetWeight(+e.target.value)}
             value={streetWeight}
             id="streetInput" type="range" min="1" max="10">
         </input>
       </label>
       <label htmlFor="railsInput">
         Rails
-        <input onChange={(e) => setRailWeight(e.target.value)}
+        <input onChange={(e) => setRailWeight(+e.target.value)}
             value={railWeight} id="railInput" type="range" min="1" max="10">
         </input>
       </label>
       <label htmlFor="flightsInput">
         Flights
-        <input onChange={(e) => setFlightWeight(e.target.value)}
+        <input onChange={(e) => setFlightWeight(+e.target.value)}
             value={flightWeight} id="flightsInput" type="range" min="1" max="10">
         </input>
       </label>

@@ -116,7 +116,6 @@ const cityTiles = {
     <rect className="village-window" width="11.6114" height="11.6114" transform="matrix(0.866025 0.5 -2.20305e-08 1 97.1223 65.5975)" fill="#3498DB"/>
     <rect className="village-window" width="11.6114" height="11.6114" transform="matrix(0.866025 0.5 -2.20305e-08 1 62.2881 45.1614)" fill="#3498DB"/></g>,
     category: 'city',
-    railConnections: [],
     streetConnections: [0,1,2,3,4,5],
     airport: false,
     height: 161
@@ -129,7 +128,6 @@ const cityTiles = {
     <path className="sight-front" d="M58 14.9883L58 80.7701L75.2781 90.7456L75.2781 57.8547C90.5469 54.6786 98.3105 57.8362 109.834 77.8058L109.834 110.697L127.113 120.672L127.113 54.8904L109.834 44.9149L92.5563 34.9393L75.2781 24.9638L58 14.9883Z" fill="#E67E22"/>
     <path className="sight-top" d="M142.101 39.9687L72.9883 0L58 14.9883L127.113 54.957L142.101 39.9687Z" fill="#F39C12"/></g>,
     category: 'city',
-    railConnections: [],
     streetConnections: [0,1,2,3,4,5],
     airport: false,
     height: 179

@@ -8,7 +8,7 @@ const railTiles = {
     <path className="rail-side" d="M89 87V89H97.75V87H89Z" fill="#414040"/></g>,
     height: 140,
     category: 'rail',
-    connections: [5,2]
+    railConnections: [5,2]
   },
   rail41SVG: {
     svg: <g><path className="rail-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -19,7 +19,7 @@ const railTiles = {
     <path className="rail-top" d="M169.5 67.714L19.5 24.4127L25.75 19L175.75 62.3013L169.5 67.714Z" fill="#C4C4C4"/></g>,
     height: 137,
     category: 'rail',
-    connections: [4,1]
+    railConnections: [4,1]
   },
   rail30SVG: {
     svg: <g><path className="rail-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -30,7 +30,7 @@ const railTiles = {
     <path className="rail-top" d="M30.5 67.714L180.5 24.4127L174.25 19L24.25 62.3013L30.5 67.714Z" fill="#C4C4C4"/></g>,
     height: 137,
     category: 'rail',
-    connections: [3,0]
+    railConnections: [3,0]
   },
   rail51SVG: {
     svg: <g><path className="rail-hex-top" d="M150 1.99706L200 45.2984L150 88.5997H50L0 45.2984L50 1.99706H150Z" fill="#2ECC71"/>
@@ -41,7 +41,7 @@ const railTiles = {
     <path className="rail-top" d="M185.55 55.8L179.35 61.2L139.71 47.6734C118.904 40.574 104.227 21.8942 102.25 0H111C112.523 18.2712 124.58 33.9677 141.842 40.1487L185.55 55.8Z" fill="#C4C4C4"/></g>,
     height: 139,
     category: 'rail',
-    connections: [5,1]
+    railConnections: [5,1]
   },
   rail42SVG: {
     svg: <g><path className="rail-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -52,7 +52,7 @@ const railTiles = {
     <path className="rail-top" d="M111 84.6H102.25C103.276 56.4064 84.7982 31.2012 57.6024 23.6964L29.35 15.9L35.5 10.5L65.6685 20.0371C93.6112 28.8706 112.181 55.318 111 84.6Z" fill="#C4C4C4"/></g>,
     height: 137,
     category: 'rail',
-    connections: [4,2]
+    railConnections: [4,2]
   },
   rail53SVG: {
     svg: <g><path className="rail-hex-top" d="M50 1.99706L0 45.2984L50 88.5997H150L200 45.2984L150 1.99706H50Z" fill="#2ECC71"/>
@@ -63,7 +63,7 @@ const railTiles = {
     <path className="rail-top" d="M14.4502 55.8L20.65 61.2L60.2905 47.6734C81.0957 40.574 95.7734 21.8942 97.75 0H89C87.4774 18.2712 75.4195 33.9677 58.1583 40.1487L14.4502 55.8Z" fill="#C4C4C4"/></g>,
     height: 139,
     category: 'rail',
-    connections: [5,3]
+    railConnections: [5,3]
   },
   rail40SVG: {
     svg: <g><path className="rail-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -74,7 +74,7 @@ const railTiles = {
     <path className="rail-hex-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'rail',
-    connections: [4,0]
+    railConnections: [4,0]
   },
   rail31SVG: {
     svg: <g><path className="rail-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
@@ -85,7 +85,7 @@ const railTiles = {
     <path className="rail-hex-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/></g>,
     height: 137,
     category: 'rail',
-    connections: [3,1]
+    railConnections: [3,1]
   },
   rail20SVG: {
     svg: <g><path className="rail-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
@@ -96,92 +96,92 @@ const railTiles = {
     <path className="rail-top" d="M89 84.6H97.75C96.7242 56.4064 115.202 31.2012 142.398 23.6964L170.65 15.9L164.5 10.5L134.331 20.0371C106.389 28.8706 87.8193 55.318 89 84.6Z" fill="#C4C4C4"/></g>,
     height: 137,
     category: 'rail',
-    connections: [2,0]
-  },
-  rail52street30SVG: {
-    svg: <g><path className="rail-hex-top" d="M50 2L0 45.3013L50 88.6026H150L200 45.3013L150 2H50Z" fill="#2ECC71"/>
-    <path className="rail-hex-side" d="M150 88.6026L200 45.3013V95.3L150 138.6H50L0 95.3V45.3013L50 88.6026H150Z" fill="#31BF61"/>
-    <path className="rail-top" d="M88 86.6V0H96.75V86.6H88Z" fill="#C4C4C4"/>
-    <path className="rail-top" d="M111 0V86.6H102.25V0H111Z" fill="#C4C4C4"/>
-    <path className="rail-side" d="M88 88.5V86.5H96.75V88.5H88Z" fill="#414040"/>
-    <path className="rail-side" d="M111 86.5V88.5H102.25V86.5H111Z" fill="#414040"/>
-    <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M111 23.355L160.5 9L185.5 30.65V32.6507L111 54.157V23.355ZM102.25 56.6829V25.8925L96.75 27.4875V58.2706L102.25 56.6829ZM35.5 75.952L88 60.7965V30.025L10.5 52.5V54.3013L35.5 75.952Z" fill="#414040"/>
-    <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M111 23.2894L160.5 9L185.5 30.6507L111 52.157V23.2894ZM102.25 54.6829V25.8153L96.75 27.4031V56.2706L102.25 54.6829ZM35.5 73.952L88 58.7965V29.929L10.5 52.3013L35.5 73.952Z" fill="#6C6C6C"/></g>,
-    height: 139,
-    category: 'rail',
-    railConnections: [5,2],
-    streetConnections: [3,0]
-  },
-  rail52street41SVG: {
-    svg: <g><path className="rail-hex-top" d="M150 2L200 45.3013L150 88.6026H50L0 45.3013L50 2H150Z" fill="#2ECC71"/>
-    <path className="rail-hex-side" d="M50 88.6026L0 45.3013V95.3L50 138.6H150L200 95.3V45.3013L150 88.6026H50Z" fill="#31BF61"/>
-    <path className="rail-top" d="M112 86.6V0H103.25V86.6H112Z" fill="#C4C4C4"/>
-    <path className="rail-top" d="M89 0V86.6H97.75V0H89Z" fill="#C4C4C4"/>
-    <path className="rail-side" d="M112 88.5V86.5H103.25V88.5H112Z" fill="#414040"/>
-    <path className="rail-side" d="M89 86.5V88.5H97.75V86.5H89Z" fill="#414040"/>
-    <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M89 23.355L39.5 9L14.5 30.65V32.6507L89 54.157V23.355ZM97.75 56.6829V25.8925L103.25 27.4875V58.2706L97.75 56.6829ZM164.5 75.952L112 60.7965V30.025L189.5 52.5V54.3013L164.5 75.952Z" fill="#414040"/>
-    <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M89 23.2894L39.5 9L14.5 30.6507L89 52.157V23.2894ZM97.75 54.6829V25.8153L103.25 27.4031V56.2706L97.75 54.6829ZM164.5 73.952L112 58.7965V29.929L189.5 52.3013L164.5 73.952Z" fill="#6C6C6C"/></g>,
-    height: 139,
-    category: 'rail',
-    railConnections: [5,2],
-    streetConnections: [4,1]
-  },
-  rail41street30SVG: {
-    svg: <g><path className="rail-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
-    <path className="rail-hex-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/>
-    <path className="rail-side" d="M185.559 54V55.8013L179.309 61.214L29.3496 17.8778L29.2998 15.9208L35.5594 10.5L185.559 54Z" fill="#414040"/>
-    <path className="rail-top" d="M185.56 53.8013L35.5596 10.5L29.3096 15.9127L179.31 59.214L185.56 53.8013Z" fill="#C4C4C4"/>
-    <path className="rail-side" d="M169.5 69.714L19.5 26.4127V24.412L25.731 19.016L175.75 62.262V64.3013L169.5 69.714Z" fill="#414040"/>
-    <path className="rail-top" d="M169.5 67.714L19.5 24.4127L25.75 19L175.75 62.3013L169.5 67.714Z" fill="#C4C4C4"/>
-    <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M125.805 47.8833L132.932 45.8258L79.6532 30.4456L72.5422 32.5078L125.805 47.8833ZM113.305 51.4917L35.5 73.952L10.5 52.3013V50.5L60.0708 36.1245L113.305 51.4917ZM92.1246 26.8289L145.432 42.2173L185.5 30.6507V28.65L160.5 7L92.1246 26.8289Z" fill="#414040"/>
-    <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M122.34 46.8833L129.468 44.8258L79.4677 30.392L72.3404 32.4495L122.34 46.8833ZM109.84 50.4917L35.5 71.952L10.5 50.3013L59.8404 36.0579L109.84 50.4917ZM91.9677 26.7836L141.968 41.2173L185.5 28.6507L160.5 7L91.9677 26.7836Z" fill="#6C6C6C"/></g>,
-    height: 137,
-    category: 'rail',
-    railConnections: [4,1],
-    streetConnections: [3,0]
-  },
-  rail30street52SVG: {
-    svg: <g><path className="rail-hex-top" d="M50 2L0 45.3013L50 88.6026H150L200 45.3013L150 2H50Z" fill="#2ECC71"/>
-    <path className="rail-hex-side" d="M150 88.6026L200 45.3013V95.3L150 138.6H50L0 95.3V45.3013L50 88.6026H150Z" fill="#31BF61"/>
-    <path className="rail-side" d="M14.4406 56V57.8013L20.6906 63.214L170.65 19.8778L170.7 17.9208L164.441 12.5L14.4406 56Z" fill="#414040"/>
-    <path className="rail-top" d="M14.4404 55.8013L164.44 12.5L170.69 17.9127L20.6904 61.214L14.4404 55.8013Z" fill="#C4C4C4"/>
-    <path className="rail-side" d="M30.5 71.714L180.5 28.4127V26.412L174.269 21.016L24.25 64.262V66.3013L30.5 71.714Z" fill="#414040"/>
-    <path className="rail-top" d="M30.5 69.714L180.5 26.4127L174.25 21L24.25 64.3013L30.5 69.714Z" fill="#C4C4C4"/>
-    <path className="street-hex-side" d="M83 86.5H118V88.5H83V86.5Z" fill="#414040"/>
-    <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M83 0H118V25.9062L83 36.0099V0ZM83 43.2267V47.3416L118 37.238V33.1231L83 43.2267ZM83 54.5585L118 44.4549V86.6H83V54.5585Z" fill="#6C6C6C"/></g>,
-    height: 139,
-    category: 'rail',
-    railConnections: [3,0],
-    streetConnections: [5,2]
-  },
-  rail41street52SVG: {
-    svg: <g><path className="rail-hex-top" d="M150 2L200 45.3013L150 88.6026H50L0 45.3013L50 2H150Z" fill="#2ECC71"/>
-    <path className="rail-hex-side" d="M50 88.6026L0 45.3013V95.3L50 138.6H150L200 95.3V45.3013L150 88.6026H50Z" fill="#31BF61"/>
-    <path className="rail-side" d="M185.559 56V57.8013L179.309 63.214L29.3496 19.8778L29.2998 17.9208L35.5594 12.5L185.559 56Z" fill="#414040"/>
-    <path className="rail-top" d="M185.56 55.8013L35.5596 12.5L29.3096 17.9127L179.31 61.214L185.56 55.8013Z" fill="#C4C4C4"/>
-    <path className="rail-side" d="M169.5 71.714L19.5 28.4127V26.412L25.731 21.016L175.75 64.262V66.3013L169.5 71.714Z" fill="#414040"/>
-    <path className="rail-top" d="M169.5 69.714L19.5 26.4127L25.75 21L175.75 64.3013L169.5 69.714Z" fill="#C4C4C4"/>
-    <path className="street-hex-side" d="M117 86.5H82V88.5H117V86.5Z" fill="#414040"/>
-    <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M117 0H82V25.9062L117 36.0098V0ZM117 43.2267V47.3416L82 37.238V33.1231L117 43.2267ZM117 54.5585L82 44.4549V86.6H117V54.5585Z" fill="#6C6C6C"/></g>,
-    height: 139,
-    category: 'rail',
-    railConnections: [4,1],
-    streetConnections: [5,2]
-  },
-  rail30street42SVG: {
-    svg: <g><path className="rail-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
-    <path className="rail-hex-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/>
-    <path className="rail-side" d="M14.4406 54V55.8013L20.6906 61.214L170.65 17.8778L170.7 15.9208L164.441 10.5L14.4406 54Z" fill="#414040"/>
-    <path className="rail-top" d="M14.4404 53.8013L164.44 10.5L170.69 15.9127L20.6904 59.214L14.4404 53.8013Z" fill="#C4C4C4"/>
-    <path className="rail-side" d="M30.5 69.714L180.5 26.4127V24.412L174.269 19.016L24.25 62.262V64.3013L30.5 69.714Z" fill="#414040"/>
-    <path className="rail-top" d="M30.5 67.714L180.5 24.4127L174.25 19L24.25 62.3013L30.5 67.714Z" fill="#C4C4C4"/>
-    <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M74.1955 47.8833L67.0682 45.8258L120.347 30.4456L127.458 32.5078L74.1955 47.8833ZM86.6955 51.4917L164.5 73.952L189.5 52.3013V50.5L139.929 36.1245L86.6955 51.4917ZM107.875 26.8289L54.5682 42.2173L14.5 30.6507V28.65L39.5 7L107.875 26.8289Z" fill="#414040"/>
-    <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M77.6596 46.8833L70.5323 44.8258L120.532 30.392L127.66 32.4495L77.6596 46.8833ZM90.1596 50.4917L164.5 71.952L189.5 50.3013L140.16 36.0579L90.1596 50.4917ZM108.032 26.7836L58.0323 41.2173L14.5 28.6507L39.5 7L108.032 26.7836Z" fill="#6C6C6C"/></g>,
-    height: 137,
-    category: 'rail',
-    railConnections: [3,0],
-    streetConnections: [4,2]
-  },
+    railConnections: [2,0]
+  }
+  // rail52street30SVG: {
+  //   svg: <g><path className="rail-hex-top" d="M50 2L0 45.3013L50 88.6026H150L200 45.3013L150 2H50Z" fill="#2ECC71"/>
+  //   <path className="rail-hex-side" d="M150 88.6026L200 45.3013V95.3L150 138.6H50L0 95.3V45.3013L50 88.6026H150Z" fill="#31BF61"/>
+  //   <path className="rail-top" d="M88 86.6V0H96.75V86.6H88Z" fill="#C4C4C4"/>
+  //   <path className="rail-top" d="M111 0V86.6H102.25V0H111Z" fill="#C4C4C4"/>
+  //   <path className="rail-side" d="M88 88.5V86.5H96.75V88.5H88Z" fill="#414040"/>
+  //   <path className="rail-side" d="M111 86.5V88.5H102.25V86.5H111Z" fill="#414040"/>
+  //   <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M111 23.355L160.5 9L185.5 30.65V32.6507L111 54.157V23.355ZM102.25 56.6829V25.8925L96.75 27.4875V58.2706L102.25 56.6829ZM35.5 75.952L88 60.7965V30.025L10.5 52.5V54.3013L35.5 75.952Z" fill="#414040"/>
+  //   <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M111 23.2894L160.5 9L185.5 30.6507L111 52.157V23.2894ZM102.25 54.6829V25.8153L96.75 27.4031V56.2706L102.25 54.6829ZM35.5 73.952L88 58.7965V29.929L10.5 52.3013L35.5 73.952Z" fill="#6C6C6C"/></g>,
+  //   height: 139,
+  //   category: 'rail',
+  //   railConnections: [5,2],
+  //   streetConnections: [3,0]
+  // },
+  // rail52street41SVG: {
+  //   svg: <g><path className="rail-hex-top" d="M150 2L200 45.3013L150 88.6026H50L0 45.3013L50 2H150Z" fill="#2ECC71"/>
+  //   <path className="rail-hex-side" d="M50 88.6026L0 45.3013V95.3L50 138.6H150L200 95.3V45.3013L150 88.6026H50Z" fill="#31BF61"/>
+  //   <path className="rail-top" d="M112 86.6V0H103.25V86.6H112Z" fill="#C4C4C4"/>
+  //   <path className="rail-top" d="M89 0V86.6H97.75V0H89Z" fill="#C4C4C4"/>
+  //   <path className="rail-side" d="M112 88.5V86.5H103.25V88.5H112Z" fill="#414040"/>
+  //   <path className="rail-side" d="M89 86.5V88.5H97.75V86.5H89Z" fill="#414040"/>
+  //   <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M89 23.355L39.5 9L14.5 30.65V32.6507L89 54.157V23.355ZM97.75 56.6829V25.8925L103.25 27.4875V58.2706L97.75 56.6829ZM164.5 75.952L112 60.7965V30.025L189.5 52.5V54.3013L164.5 75.952Z" fill="#414040"/>
+  //   <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M89 23.2894L39.5 9L14.5 30.6507L89 52.157V23.2894ZM97.75 54.6829V25.8153L103.25 27.4031V56.2706L97.75 54.6829ZM164.5 73.952L112 58.7965V29.929L189.5 52.3013L164.5 73.952Z" fill="#6C6C6C"/></g>,
+  //   height: 139,
+  //   category: 'rail',
+  //   railConnections: [5,2],
+  //   streetConnections: [4,1]
+  // },
+  // rail41street30SVG: {
+  //   svg: <g><path className="rail-hex-top" d="M50 0L0 43.3013L50 86.6026H150L200 43.3013L150 0H50Z" fill="#2ECC71"/>
+  //   <path className="rail-hex-side" d="M150 86.6026L200 43.3013V93.3L150 136.6H50L0 93.3V43.3013L50 86.6026H150Z" fill="#31BF61"/>
+  //   <path className="rail-side" d="M185.559 54V55.8013L179.309 61.214L29.3496 17.8778L29.2998 15.9208L35.5594 10.5L185.559 54Z" fill="#414040"/>
+  //   <path className="rail-top" d="M185.56 53.8013L35.5596 10.5L29.3096 15.9127L179.31 59.214L185.56 53.8013Z" fill="#C4C4C4"/>
+  //   <path className="rail-side" d="M169.5 69.714L19.5 26.4127V24.412L25.731 19.016L175.75 62.262V64.3013L169.5 69.714Z" fill="#414040"/>
+  //   <path className="rail-top" d="M169.5 67.714L19.5 24.4127L25.75 19L175.75 62.3013L169.5 67.714Z" fill="#C4C4C4"/>
+  //   <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M125.805 47.8833L132.932 45.8258L79.6532 30.4456L72.5422 32.5078L125.805 47.8833ZM113.305 51.4917L35.5 73.952L10.5 52.3013V50.5L60.0708 36.1245L113.305 51.4917ZM92.1246 26.8289L145.432 42.2173L185.5 30.6507V28.65L160.5 7L92.1246 26.8289Z" fill="#414040"/>
+  //   <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M122.34 46.8833L129.468 44.8258L79.4677 30.392L72.3404 32.4495L122.34 46.8833ZM109.84 50.4917L35.5 71.952L10.5 50.3013L59.8404 36.0579L109.84 50.4917ZM91.9677 26.7836L141.968 41.2173L185.5 28.6507L160.5 7L91.9677 26.7836Z" fill="#6C6C6C"/></g>,
+  //   height: 137,
+  //   category: 'rail',
+  //   railConnections: [4,1],
+  //   streetConnections: [3,0]
+  // },
+  // rail30street52SVG: {
+  //   svg: <g><path className="rail-hex-top" d="M50 2L0 45.3013L50 88.6026H150L200 45.3013L150 2H50Z" fill="#2ECC71"/>
+  //   <path className="rail-hex-side" d="M150 88.6026L200 45.3013V95.3L150 138.6H50L0 95.3V45.3013L50 88.6026H150Z" fill="#31BF61"/>
+  //   <path className="rail-side" d="M14.4406 56V57.8013L20.6906 63.214L170.65 19.8778L170.7 17.9208L164.441 12.5L14.4406 56Z" fill="#414040"/>
+  //   <path className="rail-top" d="M14.4404 55.8013L164.44 12.5L170.69 17.9127L20.6904 61.214L14.4404 55.8013Z" fill="#C4C4C4"/>
+  //   <path className="rail-side" d="M30.5 71.714L180.5 28.4127V26.412L174.269 21.016L24.25 64.262V66.3013L30.5 71.714Z" fill="#414040"/>
+  //   <path className="rail-top" d="M30.5 69.714L180.5 26.4127L174.25 21L24.25 64.3013L30.5 69.714Z" fill="#C4C4C4"/>
+  //   <path className="street-hex-side" d="M83 86.5H118V88.5H83V86.5Z" fill="#414040"/>
+  //   <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M83 0H118V25.9062L83 36.0099V0ZM83 43.2267V47.3416L118 37.238V33.1231L83 43.2267ZM83 54.5585L118 44.4549V86.6H83V54.5585Z" fill="#6C6C6C"/></g>,
+  //   height: 139,
+  //   category: 'rail',
+  //   railConnections: [3,0],
+  //   streetConnections: [5,2]
+  // },
+  // rail41street52SVG: {
+  //   svg: <g><path className="rail-hex-top" d="M150 2L200 45.3013L150 88.6026H50L0 45.3013L50 2H150Z" fill="#2ECC71"/>
+  //   <path className="rail-hex-side" d="M50 88.6026L0 45.3013V95.3L50 138.6H150L200 95.3V45.3013L150 88.6026H50Z" fill="#31BF61"/>
+  //   <path className="rail-side" d="M185.559 56V57.8013L179.309 63.214L29.3496 19.8778L29.2998 17.9208L35.5594 12.5L185.559 56Z" fill="#414040"/>
+  //   <path className="rail-top" d="M185.56 55.8013L35.5596 12.5L29.3096 17.9127L179.31 61.214L185.56 55.8013Z" fill="#C4C4C4"/>
+  //   <path className="rail-side" d="M169.5 71.714L19.5 28.4127V26.412L25.731 21.016L175.75 64.262V66.3013L169.5 71.714Z" fill="#414040"/>
+  //   <path className="rail-top" d="M169.5 69.714L19.5 26.4127L25.75 21L175.75 64.3013L169.5 69.714Z" fill="#C4C4C4"/>
+  //   <path className="street-hex-side" d="M117 86.5H82V88.5H117V86.5Z" fill="#414040"/>
+  //   <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M117 0H82V25.9062L117 36.0098V0ZM117 43.2267V47.3416L82 37.238V33.1231L117 43.2267ZM117 54.5585L82 44.4549V86.6H117V54.5585Z" fill="#6C6C6C"/></g>,
+  //   height: 139,
+  //   category: 'rail',
+  //   railConnections: [4,1],
+  //   streetConnections: [5,2]
+  // },
+  // rail30street42SVG: {
+  //   svg: <g><path className="rail-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#2ECC71"/>
+  //   <path className="rail-hex-side" d="M50 86.6026L0 43.3013V93.3L50 136.6H150L200 93.3V43.3013L150 86.6026H50Z" fill="#31BF61"/>
+  //   <path className="rail-side" d="M14.4406 54V55.8013L20.6906 61.214L170.65 17.8778L170.7 15.9208L164.441 10.5L14.4406 54Z" fill="#414040"/>
+  //   <path className="rail-top" d="M14.4404 53.8013L164.44 10.5L170.69 15.9127L20.6904 59.214L14.4404 53.8013Z" fill="#C4C4C4"/>
+  //   <path className="rail-side" d="M30.5 69.714L180.5 26.4127V24.412L174.269 19.016L24.25 62.262V64.3013L30.5 69.714Z" fill="#414040"/>
+  //   <path className="rail-top" d="M30.5 67.714L180.5 24.4127L174.25 19L24.25 62.3013L30.5 67.714Z" fill="#C4C4C4"/>
+  //   <path className="street-hex-side" fill-rule="evenodd" clip-rule="evenodd" d="M74.1955 47.8833L67.0682 45.8258L120.347 30.4456L127.458 32.5078L74.1955 47.8833ZM86.6955 51.4917L164.5 73.952L189.5 52.3013V50.5L139.929 36.1245L86.6955 51.4917ZM107.875 26.8289L54.5682 42.2173L14.5 30.6507V28.65L39.5 7L107.875 26.8289Z" fill="#414040"/>
+  //   <path className="street-top" fill-rule="evenodd" clip-rule="evenodd" d="M77.6596 46.8833L70.5323 44.8258L120.532 30.392L127.66 32.4495L77.6596 46.8833ZM90.1596 50.4917L164.5 71.952L189.5 50.3013L140.16 36.0579L90.1596 50.4917ZM108.032 26.7836L58.0323 41.2173L14.5 28.6507L39.5 7L108.032 26.7836Z" fill="#6C6C6C"/></g>,
+  //   height: 137,
+  //   category: 'rail',
+  //   railConnections: [3,0],
+  //   streetConnections: [4,2]
+  // },
 }
 
 export default railTiles

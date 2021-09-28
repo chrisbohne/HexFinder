@@ -60,7 +60,7 @@ function GridElement(props) {
   }
 
   function addTile() {
-    const tileToStore = {name: selectedTile.name, x: props.x, y: props.y, connections: selectedTile.connections, category: selectedTile.category}
+    const tileToStore = {name: selectedTile.name, x: props.x, y: props.y, streetConnections: selectedTile.streetConnections, railConnections: selectedTile.railConnections, category: selectedTile.category}
     if (element && selectedTile.svg === '') {
       setElement('')
       removeFromDataArr();

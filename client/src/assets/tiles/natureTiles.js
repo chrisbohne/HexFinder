@@ -3,9 +3,7 @@ const natureTiles = {
     svg: <g><path className="water-hex-top" d="M150 0L200 43.3013L150 86.6026H50L0 43.3013L50 0H150Z" fill="#00B2FF"/>
     <path className="water-hex-side" d="M50 86.6026L0 43.3013V68.3L50 111.6H150L200 68.3V43.3013L150 86.6026H50Z" fill="#1F50FF"/></g>,
     height: 111,
-    category: 'nature',
-    streetConnections: [],
-    railConnections: []
+    category: 'nature'
   },
   forestSVG: {
     svg: <g><path className="forest-hex-top" d="M150 44L200 87.3013L150 130.603H50L0 87.3013L50 44H150Z" fill="#38E754"/>
@@ -41,8 +39,7 @@ const natureTiles = {
     <path className="forest-tree-left" d="M157.828 22.0818L144.123 85.6903L138 73.9521L157.828 22.0818Z" fill="#2E9129"/>
     <path className="forest-tree-right" d="M157.775 22L171.48 85.6085L177.603 73.8703L157.775 22Z" fill="#267522"/></g>,
     height: 180,
-    category: 'nature',
-    connections: []
+    category: 'nature'
   },
   mountainSVG: {
     svg: <g><path className="mountain-right" d="M200 157.801L150 201.103L100 0L200 157.801Z" fill="#595247"/>
@@ -53,9 +50,7 @@ const natureTiles = {
     <path className="mountain-ice-left" d="M76.5527 37L99.9999 0L87.9414 48.5L86.4999 30L76.5527 37Z" fill="#FAF5EE"/>
     <path className="mountain-hex-side" d="M50 200.603L0 157.301V207.3L50 250.6H150L200 207.3V157.301L150 200.603H50Z" fill="#AA7751"/></g>,
     height: 250,
-    category: 'nature',
-    streetConnections: [],
-    railConnections: []
+    category: 'nature'
   }
 }
 
