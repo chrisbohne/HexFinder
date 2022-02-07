@@ -14,6 +14,7 @@ Villages can only be reached by car.
 <br />
 <img width="600px" src="./Images/Basic_Editor.png" />
 <br />
+<br />
 Here we can see an example of a built map. We have 2 cities, 2 towns, 2 villages and 3 sights connected with each other.
 <br />
 <br />
@@ -27,10 +28,12 @@ Here you can see the first route.
 <br />
 <img width="600px" src="Images/Travel1.png" />
 <br />
+<br />
 Now that the rails slider is more to the right than before our shortest path is changing.
 <br />
 <br />
 <img width="600px" src="Images/Travel2.png" />
+<br />
 <br />
 If we change the weight of the flights to a lower number you can see that it is proposed to take the plane.
 <br />
