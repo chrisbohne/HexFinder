@@ -18,13 +18,14 @@
   width: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   color: #ecf0f1;
 }
 
 .hero-cta h1 {
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .hero-cta p {
@@ -47,4 +48,9 @@
   color: #e67e22;
   font-size: 1.2rem;
   margin-left: 1rem;
+  color: #ecf0f1
+}
+
+a {
+  color: #ecf0f1
 }

@@ -1,54 +1,64 @@
 import './GridElement.css';
-import {useState, useContext, useEffect} from 'react'
+import {useState, useContext} from 'react'
 import {PlaygroundContext} from '../../Contexts/Playground'
-import {storeInGraph, createGridElement} from '../../helpers/graphHelper'
-import cityTiles from '../../assets/tiles/cityTiles';
-import streetTiles from '../../assets/tiles/streetTiles';
-import railTiles from '../../assets/tiles/railTiles';
-import natureTiles from '../../assets/tiles/natureTiles';
+import {createGridElement} from '../../helpers/graphHelper'
+
 
 
 function GridElement(props) {
   const [element, setElement] = useState('')
-  const {selectedTile, map, loadedData, dataArr, setDataArr, setLocations, locations} = useContext(PlaygroundContext)
+  const {selectedTile, dataArr, setDataArr, setLocations, locations, setStartLocation} = useContext(PlaygroundContext)
 
-  useEffect(() => {
-    // only for loading data
-    if (props.existingElement) {
-      let tiles;
-      const categ = props.existingElement.category
-      if (categ === 'city') tiles = cityTiles;
-      if (categ === 'street') tiles = streetTiles;
-      if (categ === 'rail') tiles = railTiles;
-      if (categ === 'nature') tiles = natureTiles;
-      const tileForGraph = {name: props.existingElement.name, x: props.x, y: props.y, connections: props.existingElement.connections, category: props.existingElement.category}
-      const svg = tiles[props.existingElement.name]
-      setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 -svg.height}>{svg.svg}</svg>)
-      storeInGraph(map, tileForGraph)
-    }
-  },[props.existingElement, props.x,props.y, map, loadedData])
+  // useEffect(() => {
+  //   // only for loading data
+  //   setLocations([])
+  //   setDataArr([])
+  //   if (props.existingElement) {
+  //     let tiles;
+  //     const categ = props.existingElement.category
+  //     if (categ === 'city') tiles = cityTiles;
+  //     if (categ === 'street') tiles = streetTiles;
+  //     if (categ === 'rail') tiles = railTiles;
+  //     if (categ === 'nature') tiles = natureTiles;
+  //     const svg = tiles[props.existingElement.name]
+  //     setElement(<svg x={props.x - 100} y={props.y -94 + 136.6 -svg.height}>{svg.svg}</svg>)
+  //     const tileToStore = {name: props.existingElement.name, x: props.x, y: props.y, streetConnections: props.existingElement.streetConnections, railConnections: props.existingElement.railConnections, category: props.existingElement.category}
+  //     storeInDataArr(tileToStore)
+  //     if (categ === "city") {
+  //       console.log(locations, 'before')
+  //       const newLocations = [...locations]
+  //       newLocations.push({x: props.x, y: props.y, name: props.existingElement.name})
+  //       setLocations(newLocations)
+  //       console.log(locations, 'after')
+  //     }
+  //   }
+  // },[props.existingElement, props.x,props.y, loadedData])
 
 
   function removeFromDataArr () {
     const index = dataArr.findIndex((el) => {
       return el.x === props.x && el.y === props.y
     })
+    console.log(index)
 
     if (index >= 0) {
       const newArr = [...dataArr]
       newArr.splice(index, 1)
       setDataArr(newArr)
-    }
 
-    const locationsCopy = [...locations]
-    const locationIndex = locationsCopy.findIndex((loc) => {
+      const locationsCopy = [...locations]
+      const locationIndex = locationsCopy.findIndex((loc) => {
       return loc.x === props.x && loc.y === props.y
-    })
+      })
 
-    if (locationIndex) {
-      locationsCopy.splice(locationIndex, 1)
-      setLocations(locationsCopy)
+      if (locationIndex >= 0) {
+        locationsCopy.splice(locationIndex, 1)
+        setLocations(locationsCopy)
+      }
+      setStartLocation([])
     }
+
+
   }
 
   function replaceInDataArr (el) {

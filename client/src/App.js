@@ -75,6 +75,7 @@ function App() {
   return (
     <div className="App">
       <PlaygroundContext.Provider value={value}>
+        {console.log(dataArr)}
         <Router>
           <NavBar />
           <Switch>

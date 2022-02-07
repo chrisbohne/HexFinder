@@ -48,9 +48,9 @@ function Settings() {
           onChange={(e) => setStartLocation(e.target.value)}
         >
           <option value=""></option>
-           {locations.map((location) => (
+           {locations.map((location, index) => (
               <option value={JSON.stringify(location)} key={location.name}>
-                {location.x + "," +location.y}
+                {location.name.slice(0,-3) + (index+1)}
               </option>
             ))}
         </select>
@@ -63,9 +63,9 @@ function Settings() {
           onChange={(e) => setTargetLocation(e.target.value)}
         >
             <option value=""></option>
-           {locations.map((location) => (
+           {locations.map((location, index) => (
               <option value={JSON.stringify(location)} key={location.name}>
-                {location.x + "," +location.y}
+                {location.name.slice(0,-3) + (index+1)}
               </option>
             ))}
         </select>
